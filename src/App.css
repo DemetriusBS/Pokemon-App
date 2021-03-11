@@ -28,3 +28,12 @@ body{
   text-align: center;
 }
 
+.footer{
+  color: #FF6347;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  font-weight: bold;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
