@@ -1,7 +1,9 @@
 import React, { PropTypes } from 'react'
 
-const Search = () => {
-    return <input type='text' className='inputInfo' placeholder='Informe o nome do Pokemon ...' />
+const Search = ({ handleSearch }) => {
+    return <input type='text' className='inputInfo' placeholder='Informe o nome do Pokemon ...'
+        onKeyUp={handleSearch}
+    />
 }
 
 Search.propTypes = {
