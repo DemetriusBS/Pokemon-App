@@ -6,7 +6,12 @@ import Axios from 'axios'
 class App extends Component {
   constructor() {
     super()
-    this.setState = {
+    this.state = {
+      results: {
+        name: '',
+        height: '',
+        weight: ''
+      }
 
     }
   }
@@ -17,19 +22,24 @@ class App extends Component {
     const enter = 13
 
     if (keyCode === enter) {
-      Axios.get(`https://pokeapi.co/api/v2/${value}/`)
+      Axios.get(`https://pokeapi.co/api/v2/pokemon/${value}/`)
         .then((response) => {
           this.setState = ({
-             
+            results: {
+              name: response.data.name,
+              height: response.data.height,
+              weight: response.data.weight
+            }
           })
         })
-    }
 
+    }
   }
 
   render() {
     return <AppContent
-
+      results={this.state.results}
+      handleSearch={(e) => this.handleSearch(e)}
     />
   }
 }
