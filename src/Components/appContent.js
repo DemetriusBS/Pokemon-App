@@ -1,13 +1,16 @@
 import React, { PropTypes } from 'react'
 import Header from './header'
 import Search from './search'
+import Info from './info'
 import Footer from './footer'
 
-const AppContent = () => (
+const AppContent = ({results, handleSearch}) => (
     <div className='myApp'>
         <Header />
 
-        <Search />
+        <Search handleSearch={handleSearch}/>
+
+        <Info />
 
         <Footer />
     </div>
