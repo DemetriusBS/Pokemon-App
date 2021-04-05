@@ -4,13 +4,14 @@ import Search from './search'
 import Info from './info'
 import Footer from './footer'
 
-const AppContent = ({results, handleSearch}) => (
+const AppContent = ({ results, handleSearch }) => (
     <div className='myApp'>
         <Header />
 
-        <Search handleSearch={handleSearch}/>
+        <Search handleSearch={handleSearch} />
 
-        <Info />
+        <Info results={results} />
+
 
         <Footer />
     </div>

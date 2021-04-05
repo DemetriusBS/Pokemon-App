@@ -24,8 +24,7 @@ class App extends Component {
     if (keyCode === enter) {
       Axios.get(`https://pokeapi.co/api/v2/pokemon/${value}/`)
         .then((response) => {
-          console.log(response.data)
-          this.setState = ({
+          this.setState({
             results: {
               name: response.data.name,
               height: response.data.height,
